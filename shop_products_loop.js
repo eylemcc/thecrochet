@@ -130,10 +130,8 @@ $(document).ready(function () {
                 product_link.appendChild(product_button);
             }
         }
-
         product_filter();
         product_loop();
     }
     list_of_products();
 });
-
