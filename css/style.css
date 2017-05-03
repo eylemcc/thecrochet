@@ -29,6 +29,7 @@ body {
 .wrapper {
     max-width: 1400px;
     width: 100%;
+    margin: 0 auto;
 }
 
 .grey {
@@ -946,6 +947,7 @@ end of media queries for the shop page------------------------------------------
 .contact {
     display: flex;
     margin: 1em;
+    max-width: 1370px;
 }
 
 .contact-content {
