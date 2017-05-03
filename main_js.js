@@ -18,6 +18,7 @@ function show_nav() {
 
 //here is the drop_down function
 
+(function ($, undefined) {
 
 $(document).ready(function () {
 
@@ -112,3 +113,4 @@ $(document).ready(function () {
 });
 
 
+})(jQuery);
