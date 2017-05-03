@@ -244,10 +244,14 @@
 
                         //gender
                         var $male = $('#male');
-                        var $female = $('#female');
-                        if($male.is(':checked') || $female.is(':checked')){
+                        if($male.is(':checked')){
                         }else {
-                            add_error($male, $female);
+                            add_error($male);
+                        }
+
+                        var $female = $('#female');
+                        if($female.is(':checked')){
+                        }else {
                             add_error($female);
                         }
 
