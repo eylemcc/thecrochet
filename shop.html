@@ -1,119 +1,118 @@
 <!doctype html>
 <html>
-    <head>
-        <title>The Crochet</title>
-        <meta charset="utf-8">
-        <link href="https://fonts.googleapis.com/css?family=Poppins:400,600 " rel="stylesheet">
-        <link rel="stylesheet" type="text/css" href="css/reset.css">
-        <link rel="stylesheet" type="text/css" href="css/style.css">
-        <meta name="viewport" content="width=device-width, initial-scale=1">
-        <script src="jquery.min.js"></script>
-        <script src="main_js.js"></script>
-        <script src="shop_products_loop.js"></script>
-
-    </head>
-    <body>
-    <nav class="nav my_cool_class" id="navigation">
-        <div class="main-nav wrapper">
-            <!--top left part of the main menu with logo and primary navigation elements -->
-            <div class="logo-menu">
-                <h1><img src="logo.png" alt="logo" class="logo"><span class="hidden">THECROCHET</span></h1>
-                <ul id="nav-menu" class="nav-menu">
-                    <li><a href="index.html">HOME</a></li>
-                    <li><a href="shop.html">SHOP</a></li>
-                    <li><a href="contact.html">CONTACT</a></li>
-                    <li><img src="icons/search.1.svg" alt=" "></li>
-                </ul>
-            </div>
-            <!--top right part of the main menu with secondary navigation elements such as shopping cart and language settings etc.-->
-            <!--menu for screen size min 991px -->
-            <div class="nav-right">
-                <ul class="nav-settings hidden">
-                    <li><img src="icons/114-user.svg" alt="setting"></li>
-                    <li>My Account</li>
-                    <li class="down_arrow"><img src="icons/chevron_down.svg" alt=" "></li>
-                    <li class="wallet"><img src="icons/wallet.1.svg" alt=" "></li>
-                    <li><span class="red">0</span> item - <span class="red">€0,00</span></li>
-                </ul>
-                <ul class="drop-down-mini" >
-
-                </ul>
-            </div>
-            <!--here is the burger and drop-down menu for the right side of the main menu for smaller screens (brk_pt: 990px)-->
-            <div id="div_nav_burger">
-                <!--menu for screen size min 691px and max 990-->
-                <svg id="nav_burger_small" class="nav_burger" width="32" height="32" viewBox="0 0 16 16">
-                    <path d="M1 3h14v3h-14zM1 7h14v3h-14zM1 11h14v3h-14z"></path>
-                </svg>
-                <ul id="drop-down" class="drop-down-small">
-                    <li class="settings">Shopping Cart</li>
-                    <li><span class="red">0</span> item - <span class="red">€0,00</span></li>
-                </ul>
-                <!--menu for screen size max 690px-->
-                <ul id="drop-down-big" class="drop-down-big">
-                    <li><a href="index.html">HOME</a></li>
-                    <li><a href="shop.html">SHOP</a></li>
-                    <li><a href="contact.html">CONTACT</a></li>
-                    <li class="settings">Shopping Cart</li>
-                    <li><img src="icons/wallet.1.svg" alt="wallet" style="width: 15px"><span class="red"> 0</span> item - <span class="red">€0,00</span></li>
-                </ul>
-            </div>
+<head>
+    <title>The Crochet</title>
+    <meta charset="utf-8">
+    <link href="https://fonts.googleapis.com/css?family=Poppins:400,600 " rel="stylesheet">
+    <link rel="stylesheet" type="text/css" href="css/reset.css">
+    <link rel="stylesheet" type="text/css" href="css/style.css">
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <script src="jquery.min.js"></script>
+    <script src="main_js.js"></script>
+    <script src="shop_products_loop.js"></script>
+</head>
+<body>
+<nav class="nav my_cool_class" id="navigation">
+    <div class="main-nav wrapper">
+        <!--top left part of the main menu with logo and primary navigation elements -->
+        <div class="logo-menu">
+            <h1><a href="index.html"><img src="logo.png" alt="logo" class="logo"><span class="hidden">THECROCHET</span></a></h1>
+            <ul id="nav-menu" class="nav-menu">
+                <li><a href="index.html">HOME</a></li>
+                <li><a href="shop.html">SHOP</a></li>
+                <li><a href="contact.html">CONTACT</a></li>
+                <li><img src="icons/search.1.svg" alt=" "></li>
+            </ul>
         </div>
-    </nav>
-    <main>
-        <div class="shop-path wrapper">
-            <a href="index.html">Home</a> /
-            <a href="shop.html">Shop</a> /
-        </div>
-            <div class="shop-content wrapper">
-                <div class="shop-filter-menu">
-                    <img src="icons/burger_menu.svg" alt="burger-menu" class="filter_burger">
-                </div>
-                <div class="shop-products-loop">
-                    <div class="shop-products-loop-title"></div>
-                    <ul class="shop-products"></ul>
-                </div>
-            </div>
-            <hr>
-        </main>
-    <footer class="wrapper">
-        <ul class="footer">
-            <li>Legal Notices</li>
-            <li><a href="index.thml">Privacy</a></li>
-            <li><a href="index.thml">Imprint</a></li>
-            <li><a href="index.thml">Terms of Use</a></li>
-        </ul>
-        <ul class="footer">
-            <li>Shopping</li>
-            <li><a href="index.thml">Payment</a></li>
-            <li><a href="index.thml">Shipment</a></li>
-            <li><a href="index.thml">Revocation Policy</a></li>
-        </ul>
-        <ul class="footer footer-social">
-            <li>Connect</li>
-            <li><a href="index.thml"><img src="icons/facebook2.svg" alt="facebook">Facebook</a></li>
-            <li><a href="index.thml"><img src="icons/403-instagram.svg" alt="instagram">Instagram</a></li>
-            <li><a href="index.thml"><img src="icons/twitter.svg" alt="">Twitter</a></li>
-            <li><a href="index.thml"><img src="icons/396-google-plus.svg" alt="g+">Google+</a></li>
-            <li><a href="index.thml"><img src="icons/466-pinterest.svg" alt="pinterest">Pinterest</a></li>
-            <li><a href="index.thml"><img src="icons/414-youtube.svg" alt="youtube">YouTube</a></li>
-            <li><a href="index.thml"><img src="icons/442-tumblr.svg" alt="tumblr">Tumblr</a></li>
-        </ul>
-        <ul class="footer-small">
-            <li><a href="index.thml">The Crochet</a></li>
-            <li><a href="index.thml">About</a></li>
-            <li><a href="index.thml">Privacy</a></li>
-            <li><a href="index.thml">Terms of Use</a></li>
-            <li><a href="index.thml"><img src="icons/facebook2.svg" alt="facebook"></a></li>
-            <li><a href="index.thml"><img src="icons/403-instagram.svg" alt="instagram"></a></li>
-            <li><a href="index.thml"><img src="icons/twitter.svg" alt=""></a></li>
-            <li><a href="index.thml"><img src="icons/396-google-plus.svg" alt="g+"></a></li>
-            <li><a href="index.thml"><img src="icons/466-pinterest.svg" alt="pinterest"></a></li>
-            <li><a href="index.thml"><img src="icons/414-youtube.svg" alt="youtube"></a></li>
-            <li><a href="index.thml"><img src="icons/442-tumblr.svg" alt="tumblr"></a></li>
-        </ul>
-    </footer>
+        <!--top right part of the main menu with secondary navigation elements such as shopping cart and language settings etc.-->
+        <!--menu for screen size min 991px -->
+        <div class="nav-right">
+            <ul class="nav-settings hidden">
+                <li><img src="icons/114-user.svg" alt="setting"></li>
+                <li>My Account</li>
+                <li class="down_arrow"><img src="icons/chevron_down.svg" alt=" "></li>
+                <li class="wallet"><img src="icons/wallet.1.svg" alt=" "></li>
+                <li><span class="red">0</span> item - <span class="red">€0,00</span></li>
+            </ul>
+            <ul class="drop-down-mini" >
 
-    </body>
+            </ul>
+        </div>
+        <!--here is the burger and drop-down menu for the right side of the main menu for smaller screens (brk_pt: 990px)-->
+        <div id="div_nav_burger">
+            <!--menu for screen size min 691px and max 990-->
+            <svg id="nav_burger_small" class="nav_burger" width="32" height="32" viewBox="0 0 16 16">
+                <path d="M1 3h14v3h-14zM1 7h14v3h-14zM1 11h14v3h-14z"></path>
+            </svg>
+            <ul id="drop-down" class="drop-down-small">
+                <li class="settings">Shopping Cart</li>
+                <li><span class="red">0</span> item - <span class="red">€0,00</span></li>
+            </ul>
+            <!--menu for screen size max 690px-->
+            <ul id="drop-down-big" class="drop-down-big">
+                <li><a href="index.html">HOME</a></li>
+                <li><a href="shop.html">SHOP</a></li>
+                <li><a href="contact.html">CONTACT</a></li>
+                <li class="settings">Shopping Cart</li>
+                <li><img src="icons/wallet.1.svg" alt="wallet" style="width: 15px"><span class="red"> 0</span> item - <span class="red">€0,00</span></li>
+            </ul>
+        </div>
+    </div>
+</nav>
+<main>
+    <div class="shop-path wrapper">
+        <a href="index.html">Home</a> /
+        <a href="shop.html">Shop</a> /
+    </div>
+    <div class="shop-content wrapper">
+        <div class="shop-filter-menu">
+            <img src="icons/burger_menu.svg" alt="burger-menu" class="filter_burger">
+        </div>
+        <div class="shop-products-loop">
+            <div class="shop-products-loop-title"></div>
+            <ul class="shop-products"></ul>
+        </div>
+    </div>
+    <hr>
+</main>
+<footer class="wrapper">
+    <ul class="footer">
+        <li>Legal Notices</li>
+        <li><a href="index.thml">Privacy</a></li>
+        <li><a href="index.thml">Imprint</a></li>
+        <li><a href="index.thml">Terms of Use</a></li>
+    </ul>
+    <ul class="footer">
+        <li>Shopping</li>
+        <li><a href="index.thml">Payment</a></li>
+        <li><a href="index.thml">Shipment</a></li>
+        <li><a href="index.thml">Revocation Policy</a></li>
+    </ul>
+    <ul class="footer footer-social">
+        <li>Connect</li>
+        <li><a href="index.thml"><img src="icons/facebook2.svg" alt="facebook">Facebook</a></li>
+        <li><a href="index.thml"><img src="icons/403-instagram.svg" alt="instagram">Instagram</a></li>
+        <li><a href="index.thml"><img src="icons/twitter.svg" alt="">Twitter</a></li>
+        <li><a href="index.thml"><img src="icons/396-google-plus.svg" alt="g+">Google+</a></li>
+        <li><a href="index.thml"><img src="icons/466-pinterest.svg" alt="pinterest">Pinterest</a></li>
+        <li><a href="index.thml"><img src="icons/414-youtube.svg" alt="youtube">YouTube</a></li>
+        <li><a href="index.thml"><img src="icons/442-tumblr.svg" alt="tumblr">Tumblr</a></li>
+    </ul>
+    <ul class="footer-small">
+        <li><a href="index.thml">The Crochet</a></li>
+        <li><a href="index.thml">About</a></li>
+        <li><a href="index.thml">Privacy</a></li>
+        <li><a href="index.thml">Terms of Use</a></li>
+        <li><a href="index.thml"><img src="icons/facebook2.svg" alt="facebook"></a></li>
+        <li><a href="index.thml"><img src="icons/403-instagram.svg" alt="instagram"></a></li>
+        <li><a href="index.thml"><img src="icons/twitter.svg" alt=""></a></li>
+        <li><a href="index.thml"><img src="icons/396-google-plus.svg" alt="g+"></a></li>
+        <li><a href="index.thml"><img src="icons/466-pinterest.svg" alt="pinterest"></a></li>
+        <li><a href="index.thml"><img src="icons/414-youtube.svg" alt="youtube"></a></li>
+        <li><a href="index.thml"><img src="icons/442-tumblr.svg" alt="tumblr"></a></li>
+    </ul>
+</footer>
+
+</body>
 
 </html>
