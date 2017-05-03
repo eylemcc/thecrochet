@@ -1,9 +1,7 @@
 <?xml version="1.0" encoding="UTF-8"?>
 <project version="4">
   <component name="ChangeListManager">
-    <list default="true" id="81200aad-5c7b-4831-835e-46cd7df57b34" name="Default" comment="edit2">
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/index.html" afterPath="$PROJECT_DIR$/index.html" />
-    </list>
+    <list default="true" id="81200aad-5c7b-4831-835e-46cd7df57b34" name="Default" comment="edit2" />
     <option name="EXCLUDED_CONVERTED_TO_IGNORED" value="true" />
     <option name="TRACKING_ENABLED" value="true" />
     <option name="SHOW_DIALOG" value="false" />
@@ -20,8 +18,8 @@
       <file leaf-file-name="index.html" pinned="false" current-in-tab="true">
         <entry file="file://$PROJECT_DIR$/index.html">
           <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="135">
-              <caret line="9" column="8" lean-forward="false" selection-start-line="9" selection-start-column="8" selection-end-line="9" selection-end-column="45" />
+            <state relative-caret-position="225">
+              <caret line="15" column="10" lean-forward="true" selection-start-line="15" selection-start-column="10" selection-end-line="15" selection-end-column="10" />
               <folding />
             </state>
           </provider>
@@ -238,7 +236,7 @@
       <option name="presentableId" value="Default" />
       <updated>1488810249827</updated>
       <workItem from="1488810251290" duration="1408000" />
-      <workItem from="1493811069908" duration="3744000" />
+      <workItem from="1493811069908" duration="3774000" />
     </task>
     <task id="LOCAL-00001" summary="edit1">
       <created>1488810383406</created>
@@ -293,7 +291,7 @@
     <servers />
   </component>
   <component name="TimeTrackingManager">
-    <option name="totallyTimeSpent" value="5152000" />
+    <option name="totallyTimeSpent" value="5182000" />
   </component>
   <component name="ToolWindowManager">
     <frame x="0" y="23" width="1440" height="809" extended-state="6" />
@@ -411,8 +409,8 @@
     </entry>
     <entry file="file://$PROJECT_DIR$/index.html">
       <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="135">
-          <caret line="9" column="8" lean-forward="false" selection-start-line="9" selection-start-column="8" selection-end-line="9" selection-end-column="45" />
+        <state relative-caret-position="225">
+          <caret line="15" column="10" lean-forward="true" selection-start-line="15" selection-start-column="10" selection-end-line="15" selection-end-column="10" />
           <folding />
         </state>
       </provider>
