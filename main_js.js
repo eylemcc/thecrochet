@@ -5,7 +5,7 @@ window.onscroll = function() {show_nav()};
 function show_nav() {
     //if the page is scrolled more than 20pixels from the top of the screen, then delegate my_cool_class to
     // navigation id in addition to .nav
-    var $detectIndex = document.location.href;
+    var $detectIndex = document.location.href.match(/[^\/]+$/)[0];
     //console.log($detectIndex);
     if ($detectIndex == 'index.html' || $detectIndex == 'index.html?') {
         if (document.body.scrollTop > 20 || document.documentElement.scrollTop > 20) {
