@@ -1,10 +1,7 @@
 <?xml version="1.0" encoding="UTF-8"?>
 <project version="4">
   <component name="ChangeListManager">
-    <list default="true" id="81200aad-5c7b-4831-835e-46cd7df57b34" name="Default" comment="edit2">
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/shop.html" afterPath="$PROJECT_DIR$/shop.html" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/shop_products_loop.js" afterPath="$PROJECT_DIR$/shop_products_loop.js" />
-    </list>
+    <list default="true" id="81200aad-5c7b-4831-835e-46cd7df57b34" name="Default" comment="edit2" />
     <option name="EXCLUDED_CONVERTED_TO_IGNORED" value="true" />
     <option name="TRACKING_ENABLED" value="true" />
     <option name="SHOW_DIALOG" value="false" />
@@ -51,11 +48,11 @@
           </provider>
         </entry>
       </file>
-      <file leaf-file-name="shop.html" pinned="false" current-in-tab="false">
+      <file leaf-file-name="shop.html" pinned="false" current-in-tab="true">
         <entry file="file://$PROJECT_DIR$/shop.html">
           <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="165">
-              <caret line="11" column="42" lean-forward="false" selection-start-line="11" selection-start-column="42" selection-end-line="11" selection-end-column="42" />
+            <state relative-caret-position="135">
+              <caret line="9" column="45" lean-forward="true" selection-start-line="9" selection-start-column="45" selection-end-line="9" selection-end-column="45" />
               <folding />
             </state>
           </provider>
@@ -91,11 +88,11 @@
           </provider>
         </entry>
       </file>
-      <file leaf-file-name="shop_products_loop.js" pinned="false" current-in-tab="true">
+      <file leaf-file-name="shop_products_loop.js" pinned="false" current-in-tab="false">
         <entry file="file://$PROJECT_DIR$/shop_products_loop.js">
           <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="595">
-              <caret line="134" column="19" lean-forward="false" selection-start-line="134" selection-start-column="19" selection-end-line="134" selection-end-column="19" />
+            <state relative-caret-position="430">
+              <caret line="123" column="89" lean-forward="true" selection-start-line="123" selection-start-column="89" selection-end-line="123" selection-end-column="89" />
               <folding />
             </state>
           </provider>
@@ -249,7 +246,7 @@
       <option name="presentableId" value="Default" />
       <updated>1488810249827</updated>
       <workItem from="1488810251290" duration="1408000" />
-      <workItem from="1493811069908" duration="3188000" />
+      <workItem from="1493811069908" duration="3227000" />
     </task>
     <task id="LOCAL-00001" summary="edit1">
       <created>1488810383406</created>
@@ -304,7 +301,7 @@
     <servers />
   </component>
   <component name="TimeTrackingManager">
-    <option name="totallyTimeSpent" value="4596000" />
+    <option name="totallyTimeSpent" value="4635000" />
   </component>
   <component name="ToolWindowManager">
     <frame x="0" y="23" width="1440" height="809" extended-state="6" />
@@ -412,18 +409,18 @@
         </state>
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/shop.html">
+    <entry file="file://$PROJECT_DIR$/shop_products_loop.js">
       <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="165">
-          <caret line="11" column="42" lean-forward="false" selection-start-line="11" selection-start-column="42" selection-end-line="11" selection-end-column="42" />
+        <state relative-caret-position="430">
+          <caret line="123" column="89" lean-forward="true" selection-start-line="123" selection-start-column="89" selection-end-line="123" selection-end-column="89" />
           <folding />
         </state>
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/shop_products_loop.js">
+    <entry file="file://$PROJECT_DIR$/shop.html">
       <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="595">
-          <caret line="134" column="19" lean-forward="false" selection-start-line="134" selection-start-column="19" selection-end-line="134" selection-end-column="19" />
+        <state relative-caret-position="135">
+          <caret line="9" column="45" lean-forward="true" selection-start-line="9" selection-start-column="45" selection-end-line="9" selection-end-column="45" />
           <folding />
         </state>
       </provider>
