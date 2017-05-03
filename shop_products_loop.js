@@ -123,7 +123,7 @@ $(document).ready(function () {
                 //view product button for each product
                 var product_button = document.createElement('button');
                 var product_link = document.createElement('a');
-                product_link.setAttribute('href', '../product' + (i + 1) + '.html');
+                product_link.setAttribute('href', 'product' + (i + 1) + '.html');
                 product_button.setAttribute('class', 'product-button');
                 product_button.textContent = 'VIEW PRODUCT';
                 li_products.appendChild(product_link);
