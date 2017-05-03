@@ -38,7 +38,7 @@ $(document).ready(function () {
         var handle_click = function () {
             var img = document.querySelector('.single-product-picture');
             var img_number = this.getAttribute('alt');
-            img.setAttribute('src', '../HTML-CSS/gallery_pictures/product1/gallery/' + img_number + '.jpg');
+            img.setAttribute('src', '../gallery_pictures/product1/gallery/' + img_number + '.jpg');
         };
 
         //a list is created and list elements are chosen from the product_variations array to display the thumbnail images of the product, each thumbnail
@@ -49,7 +49,7 @@ $(document).ready(function () {
             gallery_picture = document.createElement('img');
             product_gallery.appendChild(gallery_element);
             gallery_element.appendChild(gallery_picture);
-            gallery_picture.setAttribute('src', '../HTML-CSS/gallery_pictures/product1/thumbnails/' + product_variations[i] + '.jpg');
+            gallery_picture.setAttribute('src', '../gallery_pictures/product1/thumbnails/' + product_variations[i] + '.jpg');
             gallery_picture.setAttribute('alt', product_variations[i]);
             gallery_picture.addEventListener('click', handle_click);
         }
