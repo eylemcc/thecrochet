@@ -10,9 +10,6 @@ html {
 
 body {
     height: 100%;
-    display: flex;
-    flex-flow: column;
-    align-items: center;
 }
 
 .bold {
@@ -29,7 +26,6 @@ body {
 .wrapper {
     max-width: 1400px;
     width: 100%;
-    margin: 0 auto;
 }
 
 .grey {
@@ -59,8 +55,8 @@ navigation menu styling---------------------------------------------------------
 ------------------------------------------------------------------------------------------------------------------*/
 
 .nav {
-/*  background-color: rgb(241, 227, 218);
-    background-color: rgb(58, 58, 64);*/
+    /*  background-color: rgb(241, 227, 218);
+        background-color: rgb(58, 58, 64);*/
     position: fixed;
     width: 100%;
     z-index: 1;
@@ -432,12 +428,12 @@ picture {
 /*services - bottom line-----------------------------------*/
 .parallax1 {
     /* The image used */
-    background-image: url('../slider/images/knitting_needle.jpg');
+    background-image: url('../slider/images/baby_image.jpeg');
     width: 100%;
 
     /* Full height */
     margin-top: 90vh;
-    height: 350px;
+    height: 550px;
 
     /* Create the parallax scrolling effect */
     background-attachment: fixed;
@@ -489,16 +485,16 @@ picture {
     .content_1 li:first-child {
         flex-basis: 100%;
     }
- }
+}
 
 .parallax2 {
     /* The image used */
-    background-image: url('../slider/images/angora.jpg');
+    background-image: url('../slider/images/knitting_needle.jpg');
 
     width: 100%;
 
     /* Full height */
-    height: 250px;
+    height: 550px;
 
     /* Create the parallax scrolling effect */
     background-attachment: fixed;
@@ -509,12 +505,12 @@ picture {
 
 .parallax3 {
     /* The image used */
-    background-image: url('../slider/images/baby_image.jpeg');
+    background-image: url('../slider/images/angora.jpg');
 
     width: 100%;
 
     /* Full height */
-    height: 250px;
+    height: 550px;
 
     /* Create the parallax scrolling effect */
     background-attachment: fixed;
@@ -534,9 +530,10 @@ picture {
 .shop-path {
     padding: 1.7em 0;
     font-size: .9em;
-    border-bottom: solid thin #ccc;
+    border-bottom: solid 1px #ccc;
     padding-top: 150px;
     padding-left: 20px;
+    margin: 0 auto;
 }
 
 .shop-filter-menu {
@@ -947,7 +944,6 @@ end of media queries for the shop page------------------------------------------
 .contact {
     display: flex;
     margin: 1em;
-    max-width: 1370px;
 }
 
 .contact-content {
