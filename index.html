@@ -1,13 +1,182 @@
 <!doctype html>
-<html lang="en">
-<head>
-    <meta charset="UTF-8">
-    <meta name="viewport"
-          content="width=device-width, user-scalable=no, initial-scale=1.0, maximum-scale=1.0, minimum-scale=1.0">
-    <meta http-equiv="X-UA-Compatible" content="ie=edge">
-    <title>Document</title>
-</head>
-<body>
-<img src="paris_131.png" alt="set1">
-</body>
+<html>
+    <head>
+        <title>The Crochet</title>
+        <meta charset="utf-8">
+        <!--<link href="https://fonts.googleapis.com/css?family=Poppins:400,600" rel="stylesheet">-->
+        <link rel="stylesheet" type="text/css" href="css/reset.css">
+        <link rel="stylesheet" type="text/css" href="css/style.css">
+        <!--<script src="https://ajax.googleapis.com/ajax/libs/jquery/3.1.1/jquery.min.js"></script> -->
+        <script src="main_js.js"></script>
+        <script src="jquery.min.js"></script>
+        <!--<script src="auto_slider.js"></script>-->
+        <meta name="viewport" content="width=device-width, initial-scale=1">
+
+    </head>
+    <body>
+        <nav class="nav" id="navigation">
+            <div class="main-nav wrapper">
+                <!--top left part of the main menu with logo and primary navigation elements -->
+                <div class="logo-menu">dadada
+                    <h1><img src="logo.png" alt="logo" class="logo"><span class="hidden">THECROCHET</span></h1>
+                    <ul id="nav-menu" class="nav-menu">
+                        <li><a href="index.html">HOME</a></li>
+                        <li><a href="shop.html">SHOP</a></li>
+                        <li><a href="contact.html">CONTACT</a></li>
+                        <li><img src="icons/search.1.svg" alt=" "></li>
+                    </ul>
+                </div>
+                <!--top right part of the main menu with secondary navigation elements such as shopping cart and language settings etc.-->
+                <!--menu for screen size min 991px -->
+                <div class="nav-right">
+                    <ul class="nav-settings hidden">
+                        <li><img src="icons/114-user.svg" alt=" "></li>
+                        <li>My Account</li>
+                        <li class="down_arrow"><img src="icons/chevron_down.svg" alt=" "></li>
+                        <li class="wallet"><img src="icons/wallet.1.svg" alt=" "></li>
+                        <li><span class="red">0</span> item - <span class="red">€0,00</span></li>
+                    </ul>
+                    <ul class="drop-down-mini" >
+
+                    </ul>
+                </div>
+                <!--here is the burger and drop-down menu for the right side of the main menu for smaller screens (brk_pt: 990px)-->
+                <div id="div_nav_burger">
+                    <!--menu for screen size min 691px and max 990-->
+                    <svg id="nav_burger_small" class="nav_burger" width="32" height="32" viewBox="0 0 16 16">
+                        <path d="M1 3h14v3h-14zM1 7h14v3h-14zM1 11h14v3h-14z"></path>
+                    </svg>
+                    <ul id="drop-down" class="drop-down-small">
+                        <li class="settings">Shopping Cart</li>
+                        <li><span class="red">0</span> item - <span class="red">€0,00</span></li>
+                    </ul>
+                    <!--menu for screen size max 690px-->
+                    <ul id="drop-down-big" class="drop-down-big">
+                        <li><a href="index.html">HOME</a></li>
+                        <li><a href="shop.html">SHOP</a></li>
+                        <li><a href="contact.html">CONTACT</a></li>
+                        <li class="settings">Shopping Cart</li>
+                        <li><img src="icons/wallet.1.svg" alt=" " style="width: 15px"><span class="red"> 0</span> item - <span class="red">€0,00</span></li>
+                    </ul>
+                </div>
+            </div>
+        </nav>
+        <main>
+            <div class="container">
+                <ul id="slides">
+                    <li class="slide showing">
+                        <p>discover the magnificent world of knitting!..</p>
+                        <picture>
+                            <source srcset="slider/slider1_mini.png" media="(max-width: 425px)">
+                            <source srcset="slider/slider1_midi.png" media="(min-width: 426px) and (max-width: 768px)">
+                            <source srcset="slider/slider1_big.png" media="(min-width: 769px)">
+                            <img src='slider/slider1_midi.png' alt="slider1">
+                        </picture>
+                        <div class="slide_footnote">
+                            <p>scroll-down</p>
+                            <svg viewBox="0 0 16 16">
+                                <path d="M16 8c0-4.418-3.582-8-8-8s-8 3.582-8 8 3.582 8 8 8 8-3.582 8-8zM1.5 8c0-3.59 2.91-6.5 6.5-6.5s6.5 2.91 6.5 6.5-2.91 6.5-6.5 6.5-6.5-2.91-6.5-6.5z"></path>
+                                <path d="M4.957 5.543l-1.414 1.414 4.457 4.457 4.457-4.457-1.414-1.414-3.043 3.043z"></path>
+                            </svg>
+                        </div>
+
+                    </li>
+                    <li class="slide">
+                        <p>soft. cuddly.</p>
+                        <picture>
+                            <source srcset="slider/slider2_mini.png" media="(max-width: 425px)">
+                            <source srcset="slider/slider2_midi.png" media="(min-width: 426px) and (max-width: 768px)">
+                            <source srcset="slider/slider2_big.png" media="(min-width: 769px)">
+                            <img src='slider/slider2_midi.png' alt="slider2">
+                        </picture>
+                        <div class="slide_footnote">
+                            <p>scroll-down</p>
+                            <svg viewBox="0 0 16 16">
+                                <path d="M16 8c0-4.418-3.582-8-8-8s-8 3.582-8 8 3.582 8 8 8 8-3.582 8-8zM1.5 8c0-3.59 2.91-6.5 6.5-6.5s6.5 2.91 6.5 6.5-2.91 6.5-6.5 6.5-6.5-2.91-6.5-6.5z"></path>
+                                <path d="M4.957 5.543l-1.414 1.414 4.457 4.457 4.457-4.457-1.414-1.414-3.043 3.043z"></path>
+                            </svg>
+                        </div>
+                    </li>
+                    <li class="slide">
+                        <p>wonderful colors, wonderful motives...</p>
+                        <picture>
+                            <source srcset="slider/slider3_mini.png" media="(max-width: 425px)">
+                            <source srcset="slider/slider3_midi.png" media="(min-width: 426px) and (max-width: 768px)">
+                            <source srcset="slider/slider3_big.png" media="(min-width: 769px)">
+                            <img src='slider/slider3_midi.png' alt="slider3">
+                        </picture>
+                        <div class="slide_footnote">
+                            <p>scroll-down</p>
+                            <svg viewBox="0 0 16 16">
+                                <path d="M16 8c0-4.418-3.582-8-8-8s-8 3.582-8 8 3.582 8 8 8 8-3.582 8-8zM1.5 8c0-3.59 2.91-6.5 6.5-6.5s6.5 2.91 6.5 6.5-2.91 6.5-6.5 6.5-6.5-2.91-6.5-6.5z"></path>
+                                <path d="M4.957 5.543l-1.414 1.414 4.457 4.457 4.457-4.457-1.414-1.414-3.043 3.043z"></path>
+                            </svg>
+                        </div>
+                    </li>
+                </ul>
+                <div class="buttons">
+                    <button class="controls" id="previous"><svg width="18" height="20" viewBox="0 0 16 16">
+                        <path d="M6.293 13.707l-5-5c-0.391-0.39-0.391-1.024 0-1.414l5-5c0.391-0.391 1.024-0.391 1.414 0s0.391 1.024 0 1.414l-3.293 3.293h9.586c0.552 0 1 0.448 1 1s-0.448 1-1 1h-9.586l3.293 3.293c0.195 0.195 0.293 0.451 0.293 0.707s-0.098 0.512-0.293 0.707c-0.391 0.391-1.024 0.391-1.414 0z"></path>
+                    </svg></button>
+                    <button class="controls" id="next"><svg width="18" height="20" viewBox="0 0 16 16">
+                        <path d="M9.707 13.707l5-5c0.391-0.39 0.391-1.024 0-1.414l-5-5c-0.391-0.391-1.024-0.391-1.414 0s-0.391 1.024 0 1.414l3.293 3.293h-9.586c-0.552 0-1 0.448-1 1s0.448 1 1 1h9.586l-3.293 3.293c-0.195 0.195-0.293 0.451-0.293 0.707s0.098 0.512 0.293 0.707c0.391 0.391 1.024 0.391 1.414 0z"></path>
+                    </svg></button>
+                </div>
+            </div>
+
+            <div class="parallax1"></div>
+
+            <ul class="content_1">
+                <li><img src="ads/terapia_cut.jpg" alt="terapi"/></li>
+                <li><p>Lorem ipsum dolor sit amet, consectetur adipisicing elit. Lorem ipsum dolor sit amet, consectetur adipisicing elit. Lorem ipsum dolor sit amet, consectetur adipisicing elit. </p></li>
+            </ul>
+
+            <div class="parallax2"></div>
+
+            <ul class="content_1">
+                <li><img src="ads/terapia_cut.jpg" alt="terapi"/></li>
+                <li><p>Lorem ipsum dolor sit amet, consectetur adipisicing elit. Lorem ipsum dolor sit amet, consectetur adipisicing elit. Lorem ipsum dolor sit amet, consectetur adipisicing elit. </p></li>
+            </ul>
+
+            <div class="parallax3"></div>
+
+        </main>
+        <footer class="wrapper">
+            <ul class="footer">
+                <li>Legal Notices</li>
+                <li><a href="index.html">Privacy</a></li>
+                <li><a href="index.html">Imprint</a></li>
+                <li><a href="index.html">Terms of Use</a></li>
+            </ul>
+            <ul class="footer">
+                <li>Shopping</li>
+                <li><a href="index.html">Payment</a></li>
+                <li><a href="index.html">Shipment</a></li>
+                <li><a href="index.html">Revocation Policy</a></li>
+            </ul>
+            <ul class="footer footer-social">
+                <li>Connect</li>
+                <li><a href="index.html"><img src="icons/facebook2.svg" alt="facebook">Facebook</a></li>
+                <li><a href="index.html"><img src="icons/403-instagram.svg" alt="instagram">Instagram</a></li>
+                <li><a href="index.html"><img src="icons/twitter.svg" alt="twitter">Twitter</a></li>
+                <li><a href="index.html"><img src="icons/396-google-plus.svg" alt="g+">Google+</a></li>
+                <li><a href="index.html"><img src="icons/466-pinterest.svg" alt="pinterest">Pinterest</a></li>
+                <li><a href="index.html"><img src="icons/414-youtube.svg" alt="youtube">YouTube</a></li>
+                <li><a href="index.html"><img src="icons/442-tumblr.svg" alt="tumblr">Tumblr</a></li>
+            </ul>
+            <ul class="footer-small">
+                <li><a href="index.html">The Crochet</a></li>
+                <li><a href="index.html">About</a></li>
+                <li><a href="index.html">Privacy</a></li>
+                <li><a href="index.html">Terms of Use</a></li>
+                <li><a href="index.html"><img src="icons/facebook2.svg" alt="facebook"></a></li>
+                <li><a href="index.html"><img src="icons/403-instagram.svg" alt="instagram"></a></li>
+                <li><a href="index.html"><img src="icons/twitter.svg" alt="twitter"></a></li>
+                <li><a href="index.html"><img src="icons/396-google-plus.svg" alt="g+"></a></li>
+                <li><a href="index.html"><img src="icons/466-pinterest.svg" alt="pinterest"></a></li>
+                <li><a href="index.html"><img src="icons/414-youtube.svg" alt="youtube"></a></li>
+                <li><a href="index.html"><img src="icons/442-tumblr.svg" alt="tumblr"></a></li>
+            </ul>
+        </footer>
+    </body>
 </html>
