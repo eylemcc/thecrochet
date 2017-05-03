@@ -132,5 +132,5 @@ function list_of_products() {
     product_filter();
     product_loop();
 }
-
+list_of_products();
 
