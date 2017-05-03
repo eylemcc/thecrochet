@@ -3,7 +3,7 @@
  */
 
 $(document).ready(function () {
-    
+
     function list_of_products() {
 
         //the products and prices are saved as arrays for now, in the future these information will be accessed by php
@@ -134,5 +134,6 @@ $(document).ready(function () {
         product_filter();
         product_loop();
     }
+    list_of_products();
 });
 
