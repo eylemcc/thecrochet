@@ -346,10 +346,13 @@ main {
     height: 32px;
 }
 
-
 .slide svg path {
     fill: #333333;
     -webkit-animation: glow 1.5s infinite alternate;
+}
+
+@media screen and (min-width: 470px) and (max-width: 768px) {
+
 }
 
 @media screen and (max-width: 470px) {
@@ -376,10 +379,6 @@ picture {
     width: 100vw;
     overflow:hidden;
     position: relative;
-}
-
-@media screen and (max-width: 768px) {
-
 }
 
 .showing {
