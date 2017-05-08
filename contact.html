@@ -7,8 +7,8 @@
     <link rel="stylesheet" type="text/css" href="css/reset.css">
     <link rel="stylesheet" type="text/css" href="css/style.css">
     <meta name="viewport" content="width=device-width, initial-scale=1">
-    <script src="main_js.js"></script>
     <script src="jquery.min.js"></script>
+    <script src="main_js.js"></script>
     <script src="https://maps.googleapis.com/maps/api/js?key=AIzaSyA-l14rPYALzAISDuIGXr30H0cRkVKjcdw">
     </script>
 </head>
@@ -65,7 +65,7 @@
         <a href="index.html">Home</a> /
         <a href="contact.html">Contact</a> /
     </div>
-    <div class="contact">
+    <div class="contact wrapper">
         <section class="contact-content">
             <div>
                 <h2 class="bold assets-title">Contact</h2>
@@ -91,28 +91,35 @@
             <div>
                 <form id="contact_form" action="?" method="post">
                     <div class="assets-title bold contact_field_fullsize">Write Us!</div>
-                    <div class="contact_field_halfsize">
+                    <div class="contact_field_quartersize">
                         <label for="male">Mr.</label>
                         <input type="radio" name="gender" id="male"/>
+                        <span></span>
+                    </div>
+                    <div class="contact_field_quartersize">
                         <label for="female">Mrs./Ms.</label>
                         <input type="radio" name="gender" id="female"/>
-                    </div>
 
+                    </div>
                     <div class="contact_field_halfsize">
                         <label for="fullName">Name* :</label>
                         <input id="fullName" type="text" placeholder="Name...">
+                        <span>please enter your name</span>
                     </div>
                     <div class="contact_field_halfsize">
                         <label for="email">Email* :</label>
                         <input id="email" type="text" placeholder="user@example.com">
+                        <span>must contain '@', please check your entry</span>
                     </div>
                     <div class="contact_field_halfsize">
                         <label for="tel">Tel* :</label>
                         <input id="tel" type="text" placeholder="+43 1...">
+                        <span>only numbers and '+' can be typed here</span>
                     </div>
                     <div class="contact_field_fullsize">
                         <label for="message">Your Message* :</label>
                         <input id="message" type="text" placeholder="Your Message...">
+                        <span>this field can't be left empty!</span>
                     </div>
                     <div class="contact_field_fullsize">
                         <label for="dropdown_list">How shall we contact you?</label>
@@ -123,25 +130,28 @@
                             <option value="post">Post</option>
                             <option value="none">Not at all!</option>
                         </select>
+                        <span>please make a selection!</span>
                     </div>
                     <div class="contact_field_halfsize newsletter">
                         <label for="newsletter">I would like to receive Newsletters</label>
                         <input type="checkbox" id="newsletter">
+                        <span>this is a mandatory checkbox!</span>
                     </div>
                     <div class="contact_field_halfsize newsletter">
                         <label for="terms">I have read and agreed the <a href="index.html" style="text-decoration: underline;">Terms of Use</a> </label>
                         <input type="checkbox" id="terms">
+                        <span>without this, no go!</span>
                     </div>
 
                     <button type="submit" class="product-button" style="width:  120px; margin-bottom: 4em;">
-                        Senden
+                        Send
                     </button>
                 </form>
             </div>
         </section>
-        <div id="map" class="map">
+        <section id="map" class="map">
             <h2 class="bold assets-title">Our Location</h2>
-        </div>
+        </section>
     </div>
     <hr>
 </main>
@@ -191,9 +201,10 @@
 
             map = new google.maps.Map(document.getElementById('map'), {
                 mapTypeId: google.maps.MapTypeId.KARTE,
-                center: {lat: 48.1907968, lng: 16.3500707},
-                zoom: 16,
-                maxZoom: 16,
+                center: {lat: 48.1907968, lng: 16.3500707}, //here is the sae coordinates for the map initiation
+                zoom: 16, // initial zoom level
+                maxZoom: 16, // max zoom level
+                //map attributes for different viewing options
                 streetViewControl: false,
                 mapTypeControl: false,
                 styles: [
@@ -232,56 +243,62 @@
                 ]
             });
 
-
-
             $('#contact_form').on('submit', function(_e){
 
+                // error classes are removed from each #contact_form element
                 $('#contact_form .error').removeClass('error');
+                //all warning messages slide up
+                $('span').slideUp();
 
+                // this function adds an error class to the sibling label element of the $_elm variable
                 var add_error = function($elm){
                     $elm.siblings('label').addClass('error');
+                    //slide down the spans with the warning text in case of error
+                    $elm.parent().find('span').slideDown();
                 };
 
-                //gender
+                //check if male radio btn is checked, if not check if female is checked when not, then run add_error function
                 var $male = $('#male');
                 var $female = $('#female');
-                if($male.is(':checked') || $female.is(':checked')){
+                if($male.is(':checked')){
                 }else {
-                    add_error($male);
-                    /*
-                     add_error($female);
-                     */
+                    if($female.is(':checked')) {
+                    }else {
+                        add_error($male);
+                        add_error($female);
+                    }
                 }
-
-                //name
+                //check if input value is empty after removing the spaces from the end and the beginning, if yes run add_error
                 var $fullName = $('#fullName');
                 if($fullName.val().trim() === "" ){
                     add_error($fullName);
                 }
 
-                //email
+                //if input value is empty after removing the spaces from the end and the beginning and if it does not contain '@' character in it,run add_error
+                //this check is not sufficient, number of '@' characters and domain is not being checked
                 var $email = $('#email');
                 if($email.val().trim() === "" || $email.val().indexOf('@') < 1){
                     add_error($email);
                 }
 
-                //message
+                //check if input value is empty after removing the spaces from the end and the beginning, if yes run add_error
                 var $message = $('#message');
                 if($message.val().trim() === "" ){
                     add_error($message);
                 }
 
-                //tel
+                //check if input value is empty after removing the spaces from the end and the beginning, if yes run add_error
                 var $tel = $('#tel');
                 if($tel.val().trim() === ""){
                     add_error($tel);
                 }
+                // allowed values are defined
                 var erlaubt = " +-/0123456789";
 
+                //go through each character of input and check if it is in the allowed values, if not runn add_error
                 for(i = 0; i < $tel.val().length; i++) {
 
                     var l = $tel.val().charAt(i);
-                    console.log(l);
 
                     if(erlaubt.indexOf(l) === -1){
                         add_error($tel);
@@ -291,26 +308,27 @@
                     }
                 }
 
-                //dropdown_list
+                //first value of the dropdown list is blank per default and unless changed runs add_error
                 var $dropdown = $('#dropdown_list');
                 if($dropdown.val() === 'blank'){
                     add_error($dropdown);
                 }
 
-                //newsletter
+                //check if newsletter checkbox is checked
                 var $newsletter = $('#newsletter');
                 if($newsletter.is(':checked')){
                 }else{
                     add_error($newsletter);
                 }
 
-                //terms
+                //check if terms checkbox is checked
                 var $terms = $('#terms');
                 if($terms.is(':checked')){
                 }else{
                     add_error($terms);
                 }
 
+                // if the number of errors exceed 0, then prevent default submit function
                 if($('.error').length > 0) {
                     _e.preventDefault();
                 }

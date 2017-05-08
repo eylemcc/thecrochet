@@ -36,7 +36,7 @@ $(document).ready(function () {
             displayed_total_p.appendChild(displayed_total_text);
 
 
-            //filter is created here
+            //product filter is created here, beginning from material filter to needle filter
             filter.appendChild(filter_p_mat);
             filter_p_mat.textContent = title[0];
             for(var i = 0; i < filter_mat.length; i++) {
@@ -68,21 +68,24 @@ $(document).ready(function () {
         function product_loop() {
             //the products and prices are saved as arrays for now, in the future these information will be accessed by php
             product_names = ['Arya Erbuli', 'Sport Wool', 'Sport Wool', 'Pop Mix', 'Elite Baby', 'Ibiza', 'Nakolen Jakar', 'Ombre', 'Süper Inci Jakar', 'Vals', 'Baby Tweed New', 'Lolipop', 'Paris Bebe', 'Lora', 'Paris', 'Boho'];
-            product_prices = ['8,00€', '6,50€', '5,50€', '6,00€', '5,00€', '7,50€', '8,50€', '8,00€', '6,00€', '5,50€', '9,00€', '9,50€', '6,50€', '5,50€', '7,00€', '9,50€'];
+            product_prices = ['5,60€', '6,50€', '5,50€', '6,00€', '5,00€', '7,50€', '8,50€', '8,00€', '6,00€', '5,50€', '9,00€', '9,50€', '6,50€', '5,50€', '7,00€', '9,50€'];
 
             //function for the product loop
             var products = document.querySelector('.shop-products');
 
+            //an 'ul' element is being created and appended to .shop-products class
             var ul_products = document.createElement('ul');
             ul_products.setAttribute('class', 'product-line');
             products.appendChild(ul_products);
 
+            //this loop creates a new 'li' tag for each product name in the product_names array and fills it with product image and data
             for (var i = 0; i < product_names.length; i++) {
 
                 var li_products = document.createElement('li');
                 li_products.setAttribute('class', 'single-product');
                 ul_products.appendChild(li_products);
 
+                // to each product, its own name is given as their 'alt' attribute and as their src value
                 var img = document.createElement('img');
                 img.setAttribute('class', 'product-picture');
                 img.setAttribute('alt', product_names[i]);

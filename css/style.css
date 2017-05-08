@@ -26,10 +26,11 @@ body {
 .wrapper {
     max-width: 1400px;
     width: 100%;
+    margin: 0 auto;
 }
 
 .grey {
-    color: #888;
+    color: #999999;
 }
 
 .red {
@@ -107,7 +108,7 @@ navigation menu styling---------------------------------------------------------
 }
 h1 {
     flex: 1;
-    font-family: helvetica, sans-serif;
+    font-family: Poppins, sans-serif;
 }
 .logo-menu {
     flex: 0.3;
@@ -120,7 +121,7 @@ h1 {
     display: flex;
     padding: 0 5vw;
     align-items: center;
-    color: #888;
+    color: #999999;
     line-height: 1em;
 }
 .nav_burger {
@@ -130,21 +131,23 @@ h1 {
     display: none;
     flex-direction: column;
     position: absolute;
-    right: 25px;
-    top: 70px;
+    top: 45%;
     border: solid 1px grey;
     padding: 10px;
     border-radius: 5px;
     flex-wrap: wrap;
     width: 150px;
-    color: #888;
+    color: #999999;
     line-height: 1.4em;
-    background-color: #fff;
+    background-color: #ffffff;
     opacity: 1;
 }
-.drop-down-mini {
-    right: 185px;
+
+.drop-down-small {
+    right: 3%;
 }
+
+
 #myform {
     display: flex;
     flex-direction: column;
@@ -159,7 +162,7 @@ h1 {
     height: 1.7em;
     border-radius: 10px;
     margin: 10px 0;
-    background: #fff;
+    background: #ffffff;
     border: solid thin grey;
 }
 .settings {
@@ -191,7 +194,7 @@ h1 {
     display: flex;
     justify-content: flex-end;
     align-items: center;
-    color: #888;
+    color: #999999;
     padding: 0 1em;
 }
 
@@ -265,8 +268,28 @@ h1 {
         color: #333333;
     }
 }
+
+@media screen and (min-width: 1441px) {
+    .drop-down-mini {
+        right: 23%;
+    }
+}
+
+@media screen and (min-width: 740px) and (max-width: 1440px) {
+    .drop-down-mini {
+        right: 14.5%;
+    }
+}
+
+@media screen and (max-width: 740px) {
+    .drop-down-big {
+        right: 4%;
+        top: 65%;
+        width: 51%;
+    }
+}
 /* --------------------------------------------------------------------------------------------------------------------
---------------------------------------------Media Queries End--------------------------------------------------------------
+--------------------------------------------Nav Media Queries End--------------------------------------------------------------
 -----------------------------------------------------------------------------------------------------------------------*/
 
 
@@ -307,7 +330,7 @@ main {
     position: absolute;
     top: 40vh;
     left: 10vw;
-    margin-bottom: -16px;
+    /*margin-bottom: -16px;*/
     font-size: 52px;
     font-weight: bold;
     font-family: "Bradley Hand", sans-serif;
@@ -315,11 +338,16 @@ main {
     color: #ffffff;
 }
 
+.slide img {
+    width: 100vw;
+    height: 100vh;
+}
+
 .slide_footnote {
-    position: absolute;
-    top: 90vh;
-    left: 50vw;
     z-index: 2;
+    position: absolute;
+    left: calc(50vw - 16px);
+    top: 90vh;
 }
 
 @-webkit-keyframes glow {
@@ -329,11 +357,11 @@ main {
     }
 }
 
-.slide_footnote > p {
-    font-family: Helvetica, sans-serif;
-    position: relative;
-    top: -3vh;
-    left: -40%;
+.slide_footnote > div > p {
+    position: absolute;
+    left: -30px;
+    top: -20px;
+    width: 30vw;
     font-size: 18px;
     font-weight: bold;
     z-index: 2;
@@ -346,14 +374,16 @@ main {
     height: 32px;
 }
 
+
 .slide svg path {
     fill: #333333;
     -webkit-animation: glow 1.5s infinite alternate;
 }
 
-@media screen and (min-width: 470px) and (max-width: 768px) {
+/* --------------------------------------------------------------------------------------------------------------------
+--------------------------------------------Main Media Queries Start--------------------------------------------------------------
+-----------------------------------------------------------------------------------------------------------------------*/
 
-}
 
 @media screen and (max-width: 470px) {
     .slide p {
@@ -367,17 +397,40 @@ main {
         height: 100%;
     }
 
-    .slide_footnote > p {
+    .slide_footnote > div > p {
         font-size: 16px;
-        left: -30%;
     }
 }
+
+@media screen and (max-width: 870px) {
+
+    .content_1 p {
+        font-size: 1em;
+    }
+}
+
+@media screen and (max-width: 440px) {
+
+    .content_1 {
+        flex-direction: column;
+    }
+
+    .content_1 li:first-child {
+        flex-basis: 100%;
+    }
+
+}
+
+
+/* --------------------------------------------------------------------------------------------------------------------
+--------------------------------------------Main Media Queries Start--------------------------------------------------------------
+-----------------------------------------------------------------------------------------------------------------------*/
 
 picture {
     display: block;
     height: 100vh;
     width: 100vw;
-    overflow:hidden;
+    overflow: hidden;
     position: relative;
 }
 
@@ -387,15 +440,15 @@ picture {
 }
 
 .controls{
-    background: #333;
-    color: #fff;
+    background: #333333;
+    color: #ffffff;
     padding: 10px 12px;
     font-size: 15px;
     cursor: pointer;
     border: 0px solid #fff;
     border-radius: 50%;
     z-index: 5;
-    fill: #eee;
+    fill: #eeeeee;
     opacity: .3;
 
     -webkit-transition: opacity 2.5s;
@@ -406,8 +459,8 @@ picture {
 
 .controls:hover,
 .controls:focus{
-    background: #eee;
-    fill: #333;
+    background: #eeeeee;
+    fill: #333333;
 }
 
 .buttons{
@@ -418,20 +471,15 @@ picture {
     width: 100%;
 }
 
+/*parallax-----------------------------------*/
 
-/*main top line styling-----------------------------------*/
-
-
-
-
-/*services - bottom line-----------------------------------*/
 .parallax1 {
     /* The image used */
     background-image: url('../slider/images/baby_image.jpeg');
     width: 100%;
 
     /* Full height */
-    margin-top: 90vh;
+    margin-top: 94vh;
     height: 550px;
 
     /* Create the parallax scrolling effect */
@@ -468,24 +516,6 @@ picture {
     line-height: 2em;
 }
 
-@media screen and (max-width: 870px) {
-
-    .content_1 p {
-        font-size: 1em;
-    }
-}
-
-@media screen and (max-width: 670px) {
-
-    .content_1 {
-        flex-direction: column;
-    }
-
-    .content_1 li:first-child {
-        flex-basis: 100%;
-    }
-}
-
 .parallax2 {
     /* The image used */
     background-image: url('../slider/images/knitting_needle.jpg');
@@ -519,7 +549,9 @@ picture {
 }
 
 
-/*shop styling----------------------------------------------*/
+/*------------------------------------------------------------------------------------------------------------*/
+/*shop styling------------------------------------------------------------------------------------------------*/
+/*------------------------------------------------------------------------------------------------------------*/
 
 .shop-content {
     display: flex;
@@ -529,7 +561,7 @@ picture {
 .shop-path {
     padding: 1.7em 0;
     font-size: .9em;
-    border-bottom: solid 1px #ccc;
+    border-bottom: solid 1px #999999;
     padding-top: 150px;
     padding-left: 20px;
     margin: 0 auto;
@@ -566,20 +598,19 @@ picture {
 }
 
 .shop-filter-menu li:hover {
-    /*color: #222;*/
-    color: #797979;
+    color: #999999;
 }
 
 .shop-filter-menu ul ul li:first-child {
-    border: solid 0.3px #bbb;
+    border: solid 0.3px #999999;
     height: 9px;
     width: 9px;
     border-radius: 25%;
 }
 
 .shop-filter-menu ul ul li:first-child:hover {
-    border: solid 0.3px #bbb;
-    background-color: #bbb;
+    border: solid 0.3px #999999;
+    background-color: #999999;
     transition: .5s;
 }
 
@@ -587,7 +618,7 @@ picture {
     padding-left: 1em;
     font-size: .9em;
     line-height: 2.5em;
-    color: #888;
+    color: #999999;
     width: 7vw;
 }
 
@@ -601,7 +632,7 @@ picture {
     border-bottom: solid thin rgba(50, 50, 50, .2);
     padding-bottom: 1em;
     width: 100%;
-    color: #888;
+    color: #999999;
     align-items: center;
 }
 
@@ -647,15 +678,14 @@ picture {
 }
 
 .product-stars img {
-    width: 12px;
-    height: 12px;
+    width: 20px;
     padding-right: 5px;
     padding-bottom: 20px;
     padding-top: 20px;
 }
 
 .product-info {
-    color: #888;
+    color: #999999;
     font-size: .9em;
 }
 
@@ -676,7 +706,7 @@ picture {
     background-color: #333333;
     caption-side: top;
     transition: .7s;
-    color: #fff;
+    color: #ffffff;
 }
 
 /*-----------------------------------------------------------------------------------------------------------
@@ -696,7 +726,7 @@ for all devices with a screen-width smaller then 1024px-------------------------
     }
     .product-button {
         width: 150px;
-        background-color: #fff;
+        background-color: #ffffff;
         color: rgb(136,136,136);
         text-align: center;
         font-size: 15px;
@@ -831,7 +861,10 @@ end of media queries for the shop page------------------------------------------
 -------------------------------------------------------------------------------------------------------------*/
 
 
-/*single product page styling------------------------------------*/
+/*------------------------------------------------------------------------------------------------------------*/
+/*single product page------------------------------------------------------------------------------------------------*/
+/*------------------------------------------------------------------------------------------------------------*/
+
 .single-product-page {
     display: flex;
 }
@@ -872,7 +905,7 @@ end of media queries for the shop page------------------------------------------
 
 .product-tax, .product-shipment, .product-notice {
     font-size: 12px;
-    color: #9c9c9c;
+    color: #999999;
     line-height: 2em;
 }
 
@@ -897,7 +930,7 @@ end of media queries for the shop page------------------------------------------
     background-color: #333333;
     caption-side: top;
     transition: .7s;
-    color: #fff;
+    color: #ffffff;
 }
 
 .product-gallery {
@@ -906,10 +939,18 @@ end of media queries for the shop page------------------------------------------
     margin: 20px 0;
 }
 
+.thumb_image {
+    border: none;
+}
+
+.frame {
+    outline: solid 5px darkblue;
+}
+
 .product-gallery img {
     width: 70px;
     height: 150px;
-    padding:5px;
+    margin: 5px;
 }
 
 .product-description {
@@ -922,7 +963,7 @@ end of media queries for the shop page------------------------------------------
 .product-description li:first-child {
     font-size: 24px;
     font-weight: 100;
-    color: #000;
+    color: #333333;
     padding-top: 10px;
     border-top: solid thin rgba(136, 136, 136, 0.5);
 }
@@ -932,21 +973,24 @@ end of media queries for the shop page------------------------------------------
 }
 
 
-/*contact page styling------------------------------------*/
+/*------------------------------------------------------------------------------------------------------------*/
+/*contact page------------------------------------------------------------------------------------------------*/
+/*------------------------------------------------------------------------------------------------------------*/
 
 .assets-title {
     font-size: 2em;
-    color: #888;
+    color: #999999;
     padding: .5em 0 .2em 0;
 }
 
 .contact {
     display: flex;
-    margin: 1em;
+    margin: 1em auto;
+    max-width: 90%;
 }
 
 .contact-content {
-    flex-basis: 50%;
+    flex-basis: 49%;
     display: flex;
     flex-direction: column;
 }
@@ -955,7 +999,7 @@ end of media queries for the shop page------------------------------------------
     display: flex;
     padding: 2em;
     justify-content: space-between;
-    border-bottom: solid 1px #888888;
+    border-bottom: solid 1px #999999;
 }
 
 .contact-data li {
@@ -986,6 +1030,10 @@ end of media queries for the shop page------------------------------------------
     padding-right: 1em;
 }
 
+.contact_field_quartersize {
+    flex-basis: 25%;
+}
+
 .contact_field_halfsize {
     flex-basis: 50%;
 }
@@ -997,14 +1045,15 @@ end of media queries for the shop page------------------------------------------
 #contact_form div input {
     width: 100%;
     height: 4em;
+    line-height: 4em;
 }
 
-#contact_form div:nth-child(2) input, #contact_form div:nth-last-child(2) input, #contact_form div:nth-last-child(3) input {
+#contact_form div:nth-child(2) input, #contact_form div:nth-child(3) input, #contact_form div:nth-last-child(2) input, #contact_form div:nth-last-child(3) input {
     width: 100%;
     height: 2em;
 }
 
-#contact_form div:nth-child(2), #contact_form div:nth-last-child(2) {
+#contact_form div:nth-child(2), #contact_form div:nth-child(3), #contact_form div:nth-last-child(2) {
     display: flex;
     align-items: center;
 }
@@ -1016,7 +1065,13 @@ end of media queries for the shop page------------------------------------------
 
 #contact_form input::placeholder {
     font-size: 16px;
-    color: #9c9c9c;
+    color: #999999;
+}
+
+#contact_form > div > span {
+    color: red;
+    display: none;
+    font-size: .7em;
 }
 
 .newsletter {
@@ -1029,6 +1084,11 @@ end of media queries for the shop page------------------------------------------
     flex-basis: 50%;
     height: 600px;
 }
+
+/*------------------------------------------------------------------------------------------------------------*/
+/*contact page media queries----------------------------------------------------------------------------------*/
+/*------------------------------------------------------------------------------------------------------------*/
+
 
 @media screen and (max-width: 720px) {
 
@@ -1055,7 +1115,10 @@ end of media queries for the shop page------------------------------------------
 
 }
 
-/*footer styling--------------------------------------------*/
+
+/*------------------------------------------------------------------------------------------------------------*/
+/*footer------------------------------------------------------------------------------------------------------*/
+/*------------------------------------------------------------------------------------------------------------*/
 
 footer {
     margin: 0 auto;
@@ -1094,6 +1157,11 @@ footer {
 .footer-small {
     display: none;
 }
+
+/*------------------------------------------------------------------------------------------------------------*/
+/*footer media queries----------------------------------------------------------------------------------------*/
+/*------------------------------------------------------------------------------------------------------------*/
+
 
 @media screen and (max-width: 690px){
 

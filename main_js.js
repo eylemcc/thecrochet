@@ -17,86 +17,86 @@ function show_nav() {
 }
 
 //here is the drop_down function
-window.onload = function () {
+$(document).ready(function () {
 
+    //build the form upon 'on-click', having the form multiple times in html causes multiple use of same "id"
+    var $my_form = $('<li>\
+        <form id="myform" action="?" method="post">\
+        <label for="email" class="italic, bold">Email*</label>\
+        <input id="email" type="text">\
+        <label for="password" class="italic, bold">Password*</label>\
+        <input id="password" type="text">\
+        <button type="submit">Login</button>\
+        </form>\
+        </li>');
 
-    $(document).ready(function () {
+    var $screen_width = innerWidth;
 
-        //build the form upon 'on-click', having the form multiple times in html causes multiple use of same "id"
-        var $my_form = $('<li>\
-            <form id="myform" action="?" method="post">\
-            <label for="email" class="italic, bold">Email*</label>\
-            <input id="email" type="text">\
-            <label for="password" class="italic, bold">Passwort*</label>\
-            <input id="password" type="text">\
-            <button type="submit">Einloggen</button>\
-            </form>\
-            </li>');
+    // depending on the screen width, fitting drop-down menu is appended to burger-item
+    $('.nav_burger').on('click', function (){
+        if ($screen_width > 691 && $screen_width < 1025) {
+            $('.drop-down-small').append($my_form);
+            $('.drop-down-small').slideToggle();//dropdown animation
+        } else if ($screen_width < 690) {
+            $('.drop-down-big').append($my_form);
+            $('.drop-down-big').slideToggle();//dropdown animation
+        }
 
-        var $screen_width = innerWidth;
-
-        $('.nav_burger').on('click', function (){
-            if ($screen_width > 691 && $screen_width < 1025) {
-                $('.drop-down-small').append($my_form);
-                $('.drop-down-small').slideToggle();
-            } else if ($screen_width < 690) {
-                $('.drop-down-big').append($my_form);
-                $('.drop-down-big').slideToggle();
+        //form validation  -> for comments please see contact.html <scrip>... this validation here is only for the login menu with 2 inputs, extended version is under contact.html
+        $('#myform').on('submit', function (_e) {
+            _e.preventDefault();
+            $('#myform .error').removeClass('error');
+            var add_error = function ($elm) {
+                $('#myform').find('label[for="' + $elm.attr('id') + '"]').addClass('error'); //all input fields are in the same tag, therefore i look for the label with the matching "for" value
+                //$elm.siblings('label').addClass('error');
+            };
+            //email
+            var $email = $('#email');
+            //console.log($email.val().indexOf('@'));
+            if ($email.val().trim() === "" || $email.val().indexOf('@') < 1) {
+                add_error($email);
             }
-            $('#myform').on('submit', function (_e) {
+            //password
+            var $password = $('#password');
+            if ($password.val().trim() === "") {
+                add_error($password);
+            }
+            if ($('.error').length > 0) {
                 _e.preventDefault();
-                $('#myform .error').removeClass('error');
-                var add_error = function ($elm) {
-                    $('#myform').find('label[for="' + $elm.attr('id') + '"]').addClass('error'); //all input fields are in the same tag, therefore i look for the label with the matching "for" value
-                    //$elm.siblings('label').addClass('error');
-                };
-                //email
-                var $email = $('#email');
-                //console.log($email.val().indexOf('@'));
-                if ($email.val().trim() === "" || $email.val().indexOf('@') < 1) {
-                    add_error($email);
-                }
-                //password
-                var $password = $('#password');
-                if ($password.val().trim() === "") {
-                    add_error($password);
-                }
-                if ($('.error').length > 0) {
-                    _e.preventDefault();
 
-                }
-            });
+            }
         });
+    });
 
-        $('.down_arrow').on('click', function () {
-            $('.drop-down-mini').append($my_form);
-            $('.drop-down-mini').slideToggle();
+    // mini drop-down is appended to down arrow on big screesn
+    $('.down_arrow').on('click', function () {
+        $('.drop-down-mini').append($my_form);
+        $('.drop-down-mini').slideToggle(); //dropdown animation
 
-            $('#myform').on('submit', function (_e) {
-                $('#myform .error').removeClass('error');
-                var add_error = function ($elm) {
-                    $('#myform').find('label[for="' + $elm.attr('id') + '"]').addClass('error'); //all input fields are in the same tag, therefore i look for the label with the matching "for" value
-                    //$elm.siblings('label').addClass('error');
-                };
-                //email
-                var $email = $('#email');
-                //console.log($email.val().indexOf('@'));
-                if ($email.val().trim() === "" || $email.val().indexOf('@') < 1) {
-                    add_error($email);
-                }
-                //password
-                var $password = $('#password');
-                if ($password.val().trim() === "") {
-                    add_error($password);
-                }
-                if ($('.error').length > 0) {
-                    _e.preventDefault();
+        $('#myform').on('submit', function (_e) {
+            $('#myform .error').removeClass('error');
+            var add_error = function ($elm) {
+                $('#myform').find('label[for="' + $elm.attr('id') + '"]').addClass('error'); //all input fields are in the same tag, therefore i look for the label with the matching "for" value
 
-                }
-            });
+            };
+            //email
+            var $email = $('#email');
+            //console.log($email.val().indexOf('@'));
+            if ($email.val().trim() === "" || $email.val().indexOf('@') < 1) {
+                add_error($email);
+            }
+            //password
+            var $password = $('#password');
+            if ($password.val().trim() === "") {
+                add_error($password);
+            }
+            if ($('.error').length > 0) {
+                _e.preventDefault();
 
+            }
         });
 
     });
-};
+
+});
 
